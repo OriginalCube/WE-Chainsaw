@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Player from "./components/Player";
 
 function App() {
+  const imageAddress = "/assets/images/";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-slate-900">
+      <div className="absolute w-screen h-screen object-fill">
+        {/* Bg filter color */}
+      </div>
+      <div className="absolute h-screen w-screen flex items-center justify-center">
+        <video
+          src="/assets/videos/input.mp4"
+          className="bg-white absolute h-full w-auto"
+        ></video>
+      </div>
+      <Player />
     </div>
   );
 }
