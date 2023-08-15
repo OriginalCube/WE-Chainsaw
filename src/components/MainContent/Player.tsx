@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
-import SongData from "../Data.json";
+import Data from "../../Data.json";
 import { motion } from "framer-motion";
 
 const imageVariants = {};
 
 const Player = () => {
-  const { Songs } = SongData;
+  const { Songs } = Data;
   const audioRef = useRef(new Audio());
   const { duration } = audioRef.current;
   const intervalRef = useRef();
